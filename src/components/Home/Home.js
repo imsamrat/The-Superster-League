@@ -1,5 +1,9 @@
-import React , { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Leagues from './Leagues/Leagues';
+import BackgroundImage from '../../images/bg.jpg'
+import { Image } from 'react-bootstrap';
+import '../Home.css';
+
 
 
 const Home = () => {
@@ -14,13 +18,18 @@ const Home = () => {
             .then(data => { setLeagues(data.leagues) });
     }, [])
     return (
-        <div className="container mt-5">
-            <div className="row">
-                {
-                    first15.map((league) => <Leagues league={league} />)
-                }
-               
+        <div className="container mt-5 bg-info">
+            <div className="home-banner">
+                <Image src={BackgroundImage} fluid />
+                <h1 className="banner-title">THE SUPERSTER LEAGUE</h1>
             </div>
+    
+                <div className="row">
+                    {
+                        first15.map((league) => <Leagues league={league} />)
+                    }
+
+                </div>
         </div>
 
     );

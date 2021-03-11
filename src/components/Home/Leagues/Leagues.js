@@ -6,7 +6,7 @@ import { Link , useHistory } from "react-router-dom";
 
 const Leagues = (props) => {
     const {idLeague} = props.league;
-    const history = useHistory();
+    // const history = useHistory();
     
     const [details, setDetails] = useState({});
     
@@ -19,8 +19,9 @@ const Leagues = (props) => {
     },[])
     const {strLogo, strLeague, strSport} = details;
     return (
-        <div className="col-md-3 my-3">
-        <Card>
+
+        <div className="col-md-4 my-4">
+        <Card className="bg-secondary">
             <Card.Img variant="top" src={strLogo} />
             <Card.Body>
                 <div className="text-center">

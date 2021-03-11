@@ -1,0 +1,14 @@
+.home-banner{
+    position: relative;
+    text-align: center;
+}
+.home-banner Img{
+    width: 1110px;
+    height: 250px;
+}
+.banner-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

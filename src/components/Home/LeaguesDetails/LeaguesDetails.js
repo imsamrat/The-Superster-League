@@ -22,7 +22,7 @@ const LeaguesDetails = () => {
             .then(res => res.json())
             .then(data => setDetails(data.leagues[0]))
     }, [])
-    const { strBanner, intFormedYear, strCountry, strSport, strGender, strTwitter, strYoutube, strDescriptionEN, strDescriptionFR } = details;
+    const { strBanner, intFormedYear, strCountry, strSport, strGender, strTwitter, strFacebook,strYoutube, strDescriptionEN, strDescriptionFR } = details;
 
     return (
         <div className="container my-5">
@@ -52,9 +52,9 @@ const LeaguesDetails = () => {
             </div>
             <div>
                     <Card.Footer className="text-center footer-icon">
-                        <a className="twitter" href="https://twitter.com/"><FontAwesomeIcon icon={faTwitterSquare} /></a>
-                        <a className="facebook" href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} /></a>
-                        <a className="youtube" href="https://www.youtube.com/"><FontAwesomeIcon icon={faYoutubeSquare} /></a>
+                        <a className="twitter" href={`https://${strTwitter}`} target="_blank"><FontAwesomeIcon icon={faTwitterSquare} /></a>
+                        <a className="facebook" href={`https://${strFacebook}`} target="_blank"><FontAwesomeIcon icon={faFacebook} /></a>
+                        <a className="youtube" href={`https://${strYoutube}`} target="_blank"><FontAwesomeIcon icon={faYoutubeSquare} /></a>
                     </Card.Footer>
                 </div>
         </div>

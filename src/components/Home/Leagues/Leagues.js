@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Card, Button } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Leagues = (props) => {
     const {idLeague} = props.league;
-
+    const history = useHistory();
     
     const [details, setDetails] = useState({});
     
